@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.urls import path,include
-from django.views.generic import ListView,DetailView
+from django.views.generic import ListView,DetailView # библиотека со списками
 from news.models import Articles
 
 urlpatterns = [
