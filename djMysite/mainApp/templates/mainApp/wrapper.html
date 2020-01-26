@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>My_Site</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css" >
+
+  </head>
+  <body>
+    <div class="jumbotron">
+      <div class="container">
+        <h1>{% include "mainApp/includes/some_html.html" %}</h1>
+        {% block content %}
+        {% endblock %}
+        <p>
+          <a href="/" class="btn btn-success btn-lg">Главная страница</a>
+          <a href="/news" class="btn btn-primary btn-lg">Новости &raquo;</a>
+          <a href="{% url 'contact' %}" class="btn btn-dark btn-lg">Контакты</a>
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <img src="{% static 'mainApp/images/mers.jpg' %}" class="img-thumbnail" style="width:400px;height:300px">
+      <hr>
+      &copy; Все права защищены 2018
+    </div>
+  </body>
+</html>
